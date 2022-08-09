@@ -1,0 +1,60 @@
+<!-- Combinator Selector -->
+<!-- 1. decendant selector (space) -->
+<!-- 2. child selector (>) -->
+<!-- 3. adjacent sibling selector (+)-->
+<!-- 4. general sibling selector (~) -->
+
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+      }
+      .outerbox,
+      .outer {
+        height: 300px;
+        width: 300px;
+        background-color: red;
+        margin: 10px auto;
+      }
+
+      .outerbox > .box {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        margin: 10px auto;
+      }
+
+      .outer .box {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(0, 234, 246);
+        margin: auto;
+      }
+
+      /* .outer {
+        height: 300px;
+        width: 300px;
+        background-color: red;
+        margin: 10px auto;
+      } */
+    </style>
+  </head>
+  <body>
+    <section class="outerbox">
+      <div class="box"></div>
+      <article>
+        <main>
+          <div><div class="box"></div></div>
+        </main>
+      </article>
+      <div class="box"></div>
+    </section>
+
+    <div class="box"></div>
+
+    <section class="outer">
+      <div class="box"></div>
+    </section>
+  </body>
+</html>
