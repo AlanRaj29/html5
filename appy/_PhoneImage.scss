@@ -1,0 +1,59 @@
+%PhoneImage{
+
+
+.Phone-Image
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin-left: 80px;
+    margin-top: 60px;
+    // width: auto;
+}
+
+.title
+{
+    display: flex;
+    justify-content: center;
+     align-items: center;
+    font-size: 80px;
+    font-weight: 80;
+    color: #fffffc;
+    margin-top: 200px;
+    margin-right: 100px;
+}
+
+.sub-title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: #fffffc;
+    margin-top: 50px;
+    margin-right: 100px;
+   
+    
+}
+
+.Downloadlink
+
+{
+    display: flex;
+    
+    align-items: center;
+    height: 60px;
+    width: 200px;
+    color: #768EDE;
+    background-color: #fffffc;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 50px;
+    
+}
+
+}
+
+
