@@ -1,0 +1,31 @@
+%Container1 {
+  .container1 {
+    margin-top: 250px;
+    width: 100%;
+
+    >.row {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      >img {
+        margin: auto;
+      }
+
+      > h5 {
+        margin: 20px auto;
+      }
+
+      >p {
+        font-size: 30px;
+        margin: 20px auto;
+      }
+
+    }
+
+  }
+}
