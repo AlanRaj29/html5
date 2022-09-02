@@ -1,6 +1,8 @@
 %Navbar {
   .navbar {
     position: sticky;
+     top:0;
+    // padding-top: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,22 +12,38 @@
     color: aliceblue;
 
     >.left-route {
-      width: 80px;
+       width: 120px;
     }
 
     >.center-route {
       >a {
         text-decoration: none;
-        color: aliceblue;
+        color: #fdfefe;
         margin: 0px 10px;
+        font-weight: 800px;
+        font-size: 18px;
+
       }
+
+    
     }
-
-
+    
+  }
+}
+.right-route {
+  
+  >p {
+  width: 150px;
+  height: 50px;
+  color: #fffdfd;
+  background-color: #a1cdea;
+  border-radius: 40px;
+  font-weight: 700px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   }
-
-
-
 
 }

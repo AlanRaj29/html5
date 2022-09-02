@@ -2,6 +2,7 @@
 body .coverImage > .row .navbar {
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,12 +12,27 @@ body .coverImage > .row .navbar {
   color: aliceblue;
 }
 body .coverImage > .row .navbar > .left-route {
-  width: 80px;
+  width: 120px;
 }
 body .coverImage > .row .navbar > .center-route > a {
   text-decoration: none;
-  color: aliceblue;
+  color: #fdfefe;
   margin: 0px 10px;
+  font-weight: 800px;
+  font-size: 18px;
+}
+
+.right-route > p {
+  width: 150px;
+  height: 50px;
+  color: #fffdfd;
+  background-color: #a1cdea;
+  border-radius: 40px;
+  font-weight: 700px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 body .coverImage {
@@ -46,25 +62,29 @@ body .coverImage > .row > .row .col2 {
   box-sizing: border-box;
   max-width: 700px;
 }
-body .coverImage > .row > .row .col2 .font1 {
+body .coverImage > .row > .row .col2 > .font1 {
   font-size: 60px;
 }
-body .coverImage > .row > .row .col2 .font2 {
+body .coverImage > .row > .row .col2 > .font2 {
   margin: 10px 0px;
   font-size: 16px;
 }
-body .coverImage > .row > .row .col2 .btn {
+body .coverImage > .row > .row .col2 > .btn {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
   width: 160px;
-  background-color: aliceblue;
+  background-color: #FFFFFF;
   border-radius: 40px;
   font-size: 14px;
   font-weight: 600;
   color: #769ce8;
   margin: 20px 0px;
+}
+body .coverImage > .row > .row .col2 > .btn:hover {
+  color: #FFFFFF;
+  background-color: #769ce8;
 }
 
 body .container1 {
@@ -72,7 +92,7 @@ body .container1 {
   width: 100%;
 }
 body .container1 > .row {
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -85,10 +105,25 @@ body .container1 > .row > img {
 }
 body .container1 > .row > h5 {
   margin: 20px auto;
+  color: #8790c1;
 }
-body .container1 > .row > p {
+body .container1 > .row > .font1 {
   font-size: 30px;
   margin: 20px auto;
+  color: #5e88fc;
+}
+body .container1 > .row > .font2 {
+  margin: 20px auto;
+  color: #8790af;
+}
+
+body {
+  background-color: #f5f6ff;
+}
+body > .column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 * {

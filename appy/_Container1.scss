@@ -4,7 +4,7 @@
     width: 100%;
 
     >.row {
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -18,11 +18,19 @@
 
       > h5 {
         margin: 20px auto;
+        color: #8790c1;
+        
       }
 
-      >p {
+      >.font1 {
         font-size: 30px;
         margin: 20px auto;
+        color: #5e88fc;
+      }
+
+      >.font2{
+        margin: 20px auto;
+        color: #8790af;
       }
 
     }

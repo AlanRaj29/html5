@@ -34,28 +34,32 @@
                     box-sizing: border-box;
                     max-width: 700px;
 
-                    .font1 {
+                    >.font1 {
                         font-size: 60px;
                     }
 
-                    .font2 {
+                    >.font2 {
                         margin: 10px 0px;
                         font-size: 16px;
                     }
 
-                    .btn {
+                    >.btn {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         height: 50px;
                         width: 160px;
-                        background-color: aliceblue;
+                        background-color: #FFFFFF;
                         border-radius: 40px;
                         font-size: 14px;
                         font-weight: 600;
                         color: #769ce8;
                         margin: 20px 0px;
                         
+                    }
+                    >.btn:hover{
+                        color: #FFFFFF ;
+                        background-color: #769ce8 ;
                     }
                 }
             }
