@@ -8,6 +8,8 @@
 @import "./Container5";
 @import "./Container6";
 @import "./Container7";
+@import "./Container8";
+@import "./Footer";
 
 
 *{
@@ -27,9 +29,9 @@ body {
    @extend %Container5;
    @extend %Container6;
    @extend %Container7;
+   @extend %Container8;
+   @extend %Footer;
 }
-
-
 
 
 

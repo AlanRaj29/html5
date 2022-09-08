@@ -1,17 +1,33 @@
+@import "./mixins";
+
 %Container2 {
    .Container2 {
       width: 100%;
-      height: 850px;
+      // height: 850px;
 
       >.column {
          display: grid;
          grid-template-columns: 50% 50%;
-         grid-template-rows: 100vh;
+         grid-template-rows: auto;
          background-color: rgb(245, 246, 255);
+         // padding: 20px;
          height: 600px;
 
 
+         @include breakpoint(700px) {
+            grid-template-columns: 1fr;
 
+         }
+
+         @include breakpoint(800px) {
+           
+           
+            padding: 50px 20px;
+            box-sizing: border-box;
+         }
+         
+         
+         
          >.col1 {
             display: flex;
             flex-direction: column;
@@ -19,7 +35,12 @@
             box-sizing: border-box;
             margin: auto 80px;
             gap: 40px;
-
+            
+            @include breakpoint(800px) {
+               margin: auto;
+            }
+            
+            
 
 
             >.font1 {
@@ -45,16 +66,17 @@
                align-items: center;
                height: 50px;
                width: 160px;
-               background: linear-gradient(45deg, rgba(74, 44, 191, 0.73) 20%, rgba(106, 198, 240, 0.81) 100%);
+               background: -webkit-linear-gradient(45deg,rgba(72,44,191,1) 0%,rgba(106,198,240,1) 100%);
                color: #ffffff;
                font-size: 14px;
                border-radius: 40px;
 
             }
 
-            // >.btn:hover{
+            >.btn:hover {
+               transform: scale(1.05);
 
-            // }
+            }
 
          }
 
@@ -63,9 +85,19 @@
             width: 100%;
             background-image: url(image/Cont2bg_img.jpg);
             position: relative;
-            // overflow: hidden;
+
+            @include breakpoint(900px) {
+
+               background-image: none;
+            }
+
+            @include breakpoint(800px) {
+
+               display: none;
+            }
 
             >.img {
+               top: -10%;
                position: absolute;
 
 

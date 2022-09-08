@@ -1,24 +1,41 @@
+@import "./mixins";
+
 %Container3 {
     .Container3 {
        width: 100%;
+       padding: 150px 20px;
+       box-sizing: border-box;
+       display: flex;
+       justify-content: center;
+
+       @include breakpoint(950px) {
+         padding: 50px 20px;
+         
+    }
  
        >.column {
           display: grid;
           grid-template-columns: 50% 50%;
-          grid-template-rows: 100vh;
-          background-color: rgb(245, 246, 255);
-          height: 600px;
+          
+          @include breakpoint(950px) {
+             grid-template-columns: 1fr;
+             
+        }
+      
 
           >.col1 {
             width: 100%;
             background-image: url(Image/Cont3bg_img.jpg);
-            position: relative;
-            // overflow: hidden;
+  
+
+            @include breakpoint(950px) {
+        
+           }
+        
 
             >.img {
-               position: absolute;
-
-
+               max-width: 650px;
+               width: 100%;
             }
          }
  
@@ -31,6 +48,16 @@
              box-sizing: border-box;
              margin: auto 80px;
              gap: 40px;
+             max-width: 600px;
+
+             @include breakpoint(950px) {
+               margin: 30px auto;
+               grid-template-columns: 1fr;
+               height: auto;     
+               box-sizing: border-box;
+            }
+            
+            
  
  
  
@@ -64,9 +91,11 @@
  
              }
  
-             // >.btn:hover{
- 
-             // }
+             >.btn:hover{
+
+               transform: scale(1.05);
+
+             }
  
           }
  

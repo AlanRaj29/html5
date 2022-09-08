@@ -1,7 +1,10 @@
+@import "./mixins";
+
+
 %Navbar {
   .navbar {
-    // position: sticky;
-    //  top:0;
+    position: sticky;
+     top:0;
     // padding-top: 200px;
     display: flex;
     justify-content: space-between;
@@ -10,6 +13,14 @@
     padding: 0px 30px;
     box-sizing: border-box;
     color: aliceblue;
+
+    @include breakpoint(700px) {
+      background: -webkit-linear-gradient(45deg,rgba(72,44,191,1) 0%,rgba(106,198,240,1) 100%)
+      
+    }
+
+
+
 
     >.left-route {
        width: 120px;
@@ -24,30 +35,46 @@
         font-size: 18px;
 
       }
-
+      @include breakpoint(1050px) {
+        display: none;
+      }
     
+    }
+
+    .right-route {
+
+      @include breakpoint(1050px) {
+        display: none;
+      }
+      
+      >p {
+      width: 150px;
+      height: 50px;
+      color: #fffdfd;
+      background-color: #a1cdea;
+      border-radius: 40px;
+      font-weight: 700px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      }
+      >p:hover{
+        color: 337ab7;
+        background-color:aliceblue;
+      }
+    
+    }
+
+    .menu {
+      display: none;
+
+      @include breakpoint(1050px) {
+        display: block;
+      }
+      
     }
     
   }
-}
-.right-route {
-  
-  >p {
-  width: 150px;
-  height: 50px;
-  color: #fffdfd;
-  background-color: #a1cdea;
-  border-radius: 40px;
-  font-weight: 700px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  }
-  >p:hover{
-    color: 337ab7;
-    background-color:aliceblue;
-  }
-
 }
