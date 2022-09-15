@@ -30,6 +30,8 @@
             display: flex;
             width: auto;
             justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
             
 
             >.col{
@@ -40,6 +42,13 @@
                 padding: 20px;
                 line-height: 20px;
                 color: #434345;
+
+                &:hover >i{
+
+                    color: #87aed8;
+                    background:#ffff;
+
+                }
                 
 
                 >i{
@@ -57,10 +66,7 @@
                         
                 }
 
-                >i:hover{
-                    color: #87aed8;
-                    background:aliceblue;
-                }
+                
 
                 >p{
                     color: #8792b4;

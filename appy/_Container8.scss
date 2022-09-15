@@ -3,18 +3,26 @@
 %Container8 {
     .container8 {
 
-        height: 80%;
+        height: auto;
         background: linear-gradient(45deg, rgba(74, 44, 191, 0.73) 20%, rgba(106, 198, 240, 0.81) 100%);
 
         >.row {
             display: flex;
             justify-content: center;
-            padding: 40px 20px;
+            padding: 40px 20px; 
 
-            >.col1 {
+            
+            >.col1{
 
+                @include breakpoint(990px) {
+                    display: none;
+                     
+                }
+     
                 >img {
+
                     margin-top: -150px;
+
 
                 }
             }
@@ -39,9 +47,27 @@
                 >.btn {
 
                     margin-top: 50px;
+                    display: flex;
 
+                    @include breakpoint(990px) {
+
+                      
+                        @include breakpoint(990px) {
+                            display: block;
+                             
+                        }
+                         
+                    }
+
+                    .btn1{
+
+                   
                     >span {
                         color: #768ede;
+
+                        &:hover{
+                            color: #fff;
+                        }
 
                         >i {
                             height: 60px;
@@ -52,20 +78,62 @@
                             justify-content: center;
                             align-items: center;
                             font-weight: 50;
+                            gap: 10px;
+                            padding: 5px;
+
+                            &:hover{
+                                background: linear-gradient(45deg, rgba(74, 44, 191, 0.73) 20%, rgba(106, 198, 240, 0.81) 100%);
+
+                            }
                             
+                        }
+
+                    }
+
+                }
+
+                >.btn2{
+
+                    margin-left: 10px;
+
+                    @include breakpoint(990px) {
+                        margin-left: 0px;
+                       margin-top: 20px;
+                         
+                    }
+
+                    >span {
+                        color: #768ede;
+
+                        &:hover{
+                            color: #fff;
+                        }
+
+                        >i {
+                           
+                            height: 60px;
+                            width: 200px;
+                            background-color: aliceblue;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: 50;
+                            gap: 10px;
                             padding: 5px;
                             
+                            &:hover{
+                                background: linear-gradient(45deg, rgba(74, 44, 191, 0.73) 20%, rgba(106, 198, 240, 0.81) 100%);
+
+                            }
                         }
 
                     }
 
-                    >.btn2{
-                        >i{
-                            margin-left: 230px;
-                            margin-top:-60px;
-                        }
-                    }
-                    
+
+                }
+
+                  
 
                 }
 

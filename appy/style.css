@@ -11,7 +11,7 @@ body .coverImage > .row .navbar {
   box-sizing: border-box;
   color: aliceblue;
 }
-@media (max-width: 700px) {
+@media (max-width: 1050px) {
   body .coverImage > .row .navbar {
     background: -webkit-linear-gradient(45deg, rgb(72, 44, 191) 0%, rgb(106, 198, 240) 100%);
   }
@@ -52,12 +52,16 @@ body .coverImage > .row .navbar .right-route > p:hover {
   color: 337ab7;
   background-color: aliceblue;
 }
-body .coverImage > .row .navbar .menu {
+body .coverImage > .row .navbar .menu > div {
   display: none;
 }
 @media (max-width: 1050px) {
-  body .coverImage > .row .navbar .menu {
+  body .coverImage > .row .navbar .menu > div {
     display: block;
+    height: 4px;
+    width: 35px;
+    background-color: aliceblue;
+    margin: 5px 0px;
   }
 }
 
@@ -637,8 +641,8 @@ body .Container7 > .column > .col2 > .items > span {
   color: #788afc;
 }
 body .Container7 > .column > .col2 > .items > span > i {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -665,13 +669,18 @@ body .Container7 > .column > .col2 > .item3 {
 }
 
 body .container8 {
-  height: 80%;
+  height: auto;
   background: linear-gradient(45deg, rgba(74, 44, 191, 0.73) 20%, rgba(106, 198, 240, 0.81) 100%);
 }
 body .container8 > .row {
   display: flex;
   justify-content: center;
   padding: 40px 20px;
+}
+@media (max-width: 990px) {
+  body .container8 > .row > .col1 {
+    display: none;
+  }
 }
 body .container8 > .row > .col1 > img {
   margin-top: -150px;
@@ -693,11 +702,20 @@ body .container8 > .row > .col2 > .font2 {
 }
 body .container8 > .row > .col2 > .btn {
   margin-top: 50px;
+  display: flex;
 }
-body .container8 > .row > .col2 > .btn > span {
+@media (max-width: 990px) and (max-width: 990px) {
+  body .container8 > .row > .col2 > .btn {
+    display: block;
+  }
+}
+body .container8 > .row > .col2 > .btn .btn1 > span {
   color: #768ede;
 }
-body .container8 > .row > .col2 > .btn > span > i {
+body .container8 > .row > .col2 > .btn .btn1 > span:hover {
+  color: #fff;
+}
+body .container8 > .row > .col2 > .btn .btn1 > span > i {
   height: 60px;
   width: 200px;
   background-color: aliceblue;
@@ -705,11 +723,40 @@ body .container8 > .row > .col2 > .btn > span > i {
   justify-content: center;
   align-items: center;
   font-weight: 50;
+  gap: 10px;
   padding: 5px;
 }
-body .container8 > .row > .col2 > .btn > .btn2 > i {
-  margin-left: 230px;
-  margin-top: -60px;
+body .container8 > .row > .col2 > .btn .btn1 > span > i:hover {
+  background: linear-gradient(45deg, rgba(74, 44, 191, 0.73) 20%, rgba(106, 198, 240, 0.81) 100%);
+}
+body .container8 > .row > .col2 > .btn > .btn2 {
+  margin-left: 10px;
+}
+@media (max-width: 990px) {
+  body .container8 > .row > .col2 > .btn > .btn2 {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
+body .container8 > .row > .col2 > .btn > .btn2 > span {
+  color: #768ede;
+}
+body .container8 > .row > .col2 > .btn > .btn2 > span:hover {
+  color: #fff;
+}
+body .container8 > .row > .col2 > .btn > .btn2 > span > i {
+  height: 60px;
+  width: 200px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 50;
+  gap: 10px;
+  padding: 5px;
+}
+body .container8 > .row > .col2 > .btn > .btn2 > span > i:hover {
+  background: linear-gradient(45deg, rgba(74, 44, 191, 0.73) 20%, rgba(106, 198, 240, 0.81) 100%);
 }
 
 body .footer {
@@ -738,6 +785,8 @@ body .footer > .column {
   display: flex;
   width: auto;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 body .footer > .column > .col {
   margin: 5px;
@@ -746,6 +795,10 @@ body .footer > .column > .col {
   padding: 20px;
   line-height: 20px;
   color: #434345;
+}
+body .footer > .column > .col:hover > i {
+  color: #87aed8;
+  background: white;
 }
 body .footer > .column > .col > i {
   width: 80px;
@@ -759,10 +812,6 @@ body .footer > .column > .col > i {
   text-align: center;
   justify-content: center;
   margin-left: 100px;
-}
-body .footer > .column > .col > i:hover {
-  color: #87aed8;
-  background: aliceblue;
 }
 body .footer > .column > .col > p {
   color: #8792b4;
