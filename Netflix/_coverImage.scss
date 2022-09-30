@@ -1,0 +1,124 @@
+@import "./mixins";
+
+@mixin Cover {
+  .coverImage {
+    @include Box(100vh, 100%);
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/0f07b807-7be1-457d-be88-eb9153d5d4e9/8db04df8-caaf-4f19-8e51-9309664068b2/IN-en-20220815-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
+    position: relative;
+
+    > .row {
+      @include Flex(space-between, center);
+      @include Box(80px, 100%);
+      padding: 0px 30px;
+      box-sizing: border-box;
+      position: absolute;
+      z-index: 99;
+
+      > img {
+        width: 120px;
+
+        @include breakpoint(600px) {
+          width: 80px;
+        }
+      }
+
+      .btns {
+        display: flex;
+        gap: 10px;
+
+        .languageBtn {
+          @include Flex(center, center);
+          @include Box(38px, 120px, null, 1px solid white);
+          cursor: pointer;
+
+          @include breakpoint(600px) {
+            @include Box(25px, 80px, null, 1px solid white);
+            font-size: 12px;
+          }
+        }
+
+        .signinBtn {
+          @include Flex(center, center);
+          @include Box(40px, 120px, red, 1px solid transparent);
+          cursor: pointer;
+
+          // &:hover {
+          //   @include Box(40px, 120px, transparent, 1px solid red);
+          // }
+
+          @include breakpoint(600px) {
+            @include Box(25px, 80px, null, 1px solid white);
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    > .bgColor {
+      @include Flex(center, center);
+      @include Box(100%, 100%, rgba(0, 0, 0, 0.642));
+      position: absolute;
+
+      > .content {
+        @include Flex(center, center, column);
+        text-align: center;
+        max-width: 550px;
+        margin: 50px 20px;
+
+        > .title {
+          font-size: 42px;
+          font-weight: bold;
+          margin: 5px 0px;
+
+          @include breakpoint(600px) {
+            font-size: 25px;
+          }
+        }
+
+        > .subTitle {
+          font-size: 24px;
+          font-weight: 500;
+          margin: 5px 0px;
+
+          @include breakpoint(600px) {
+            font-size: 20px;
+          }
+        }
+
+        > .statement {
+          font-size: 15px;
+          margin: 5px 0px;
+
+          @include breakpoint(600px) {
+            font-size: 14px;
+          }
+        }
+
+        > .row {
+          @include Flex(space-between, center);
+          margin: 40px auto;
+
+          @include breakpoint(600px) {
+            @include Flex(center, center, row, wrap);
+          }
+
+          > input {
+            @include Box(45px, 380px, white, none);
+            box-sizing: border-box;
+            padding-left: 20px;
+
+            @include breakpoint(600px) {
+              width: 100%;
+              margin: 20px auto;
+            }
+          }
+
+          > .btn {
+            @include Flex(center, center);
+            @include Box(46px, 120px, red);
+          }
+        }
+      }
+    }
+  }
+}

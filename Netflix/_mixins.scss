@@ -1,0 +1,25 @@
+@mixin Flex(
+  $justifyContent: start,
+  $alignItems: start,
+  $flexDirection: row,
+  $flexWrap: nowrap
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+  flex-wrap: $flexWrap;
+}
+
+@mixin Box($height: auto, $width: auto, $bgColor: transparent, $border: auto) {
+  height: $height;
+  width: $width;
+  background-color: $bgColor;
+  border: $border;
+}
+
+@mixin breakpoint($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}

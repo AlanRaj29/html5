@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0%;
+        background-color: black;
+      }
+
+      .heart {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        transform: rotate(45deg);
+        scale: 1;
+        animation-name: Beat;
+        animation-duration: 0.3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .heart::before {
+        content: "";
+        position: absolute;
+        top: 0%;
+        height: 100%;
+        width: 50px;
+        transform: translate(-50px, 0);
+        background-color: red;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+      }
+
+      .heart::after {
+        content: "";
+        position: absolute;
+        right: 0%;
+        height: 50px;
+        width: 100%;
+        background-color: red;
+        transform: translate(0, -50px);
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+      }
+
+      .heart:hover {
+        animation-duration: 0.1s;
+        box-shadow: 2px 2px 100px rgba(255, 0, 0, 0.546);
+      }
+
+      @keyframes Beat {
+        0% {
+        }
+
+        100% {
+          scale: 1.2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="heart"></main>
+  </body>
+</html>

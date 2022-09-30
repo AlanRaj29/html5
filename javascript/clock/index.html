@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0%;
+        background-color: black;
+        color: aliceblue;
+        font-family: cursive;
+      }
+
+      .clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        width: 600px;
+        border: 5px solid red;
+        border-radius: 10px;
+      }
+
+      .clock > span {
+        font-size: 50px;
+        margin: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock" onclick="stop()">
+      <span id="hour">11</span>
+      <span>:</span>
+      <span id="min">50</span>
+      <span>:</span>
+      <span id="sec">10</span>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

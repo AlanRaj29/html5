@@ -3,8 +3,9 @@
 %Container8 {
     .container8 {
 
-        height: auto;
+        height: 88%;
         background: linear-gradient(45deg, rgba(74, 44, 191, 0.73) 20%, rgba(106, 198, 240, 0.81) 100%);
+        margin-top: 100px;
 
         >.row {
             display: flex;
@@ -52,7 +53,7 @@
                     @include breakpoint(990px) {
 
                       
-                        @include breakpoint(990px) {
+                        @include breakpoint(490px) {
                             display: block;
                              
                         }
@@ -96,7 +97,7 @@
 
                     margin-left: 10px;
 
-                    @include breakpoint(990px) {
+                    @include breakpoint(490px) {
                         margin-left: 0px;
                        margin-top: 20px;
                          

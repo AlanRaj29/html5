@@ -1,0 +1,56 @@
+@import "./mixins";
+
+@mixin Row2 {
+  .row2 {
+    @include Flex(null, center);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    // border-top: 10px solid rgba(128, 128, 128, 0.233);
+    border-bottom: 10px solid rgba(128, 128, 128, 0.233);
+
+    @include breakpoint(700px) {
+      @include Flex(null, center, null, wrap-reverse);
+    }
+
+    > img {
+      max-width: 400px;
+
+      @include breakpoint(900px) {
+        max-width: 350px;
+      }
+
+      @include breakpoint(800px) {
+        max-width: 300px;
+      }
+
+      @include breakpoint(600px) {
+        max-width: 100%;
+      }
+    }
+
+    article {
+      @include breakpoint(700px) {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 40px;
+        margin: 20px 0px;
+        font-weight: bold;
+
+        @include breakpoint(600px) {
+          font-size: 20px;
+        }
+      }
+      p {
+        font-size: 22px;
+        line-height: 30px;
+
+        @include breakpoint(600px) {
+          font-size: 15px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}

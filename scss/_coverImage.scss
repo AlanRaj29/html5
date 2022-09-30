@@ -1,0 +1,73 @@
+@mixin Cover {
+    .coverImage {
+      @include Box(100vh,100%);
+      height: 100vh;
+      background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/0f07b807-7be1-457d-be88-eb9153d5d4e9/8db04df8-caaf-4f19-8e51-9309664068b2/IN-en-20220815-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
+      position: relative;
+  
+      .row {
+        @include Flex(space-between, center);
+        @include Box(80px,100%);
+        height: 80px;
+        width: 100%;
+        padding: 0px 30px;
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 99;
+  
+        .btns {
+          display: flex;
+          gap: 10px;
+  
+          .languageBtn {
+            @include Flex(center, center);
+            color: aliceblue;
+            height: 38px;
+            width: 120px;
+            border: 1px solid white;
+            cursor: pointer;
+          }
+  
+          .signinBtn {
+            @include Flex(center, center);
+            color: aliceblue;
+            height: 40px;
+            width: 120px;
+            background-color: red;
+            cursor: pointer;
+          }
+        }
+      }
+  
+      .bgColor {
+        @include Flex(center, center);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.642);
+  
+        .content {
+          @include Flex(center, center, column);
+          text-align: center;
+          max-width: 550px;
+  
+          .title {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 5px 0px;
+          }
+  
+          .subTitle {
+            font-size: 24px;
+            font-weight: 500;
+            margin: 5px 0px;
+          }
+  
+          .statement {
+            font-size: 15px;
+            margin: 5px 0px;
+          }
+        }
+      }
+    }
+  }

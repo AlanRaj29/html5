@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 100vh;
+        margin: 0%;
+      }
+
+      button {
+        cursor: pointer;
+        height: 40px;
+        width: 120px;
+        background-color: antiquewhite;
+      }
+
+      button:active {
+        scale: 1.1;
+      }
+
+      button:hover {
+        background-color: aquamarine;
+      }
+
+      .sidebar {
+        position: fixed;
+        right: 0%;
+        height: 100vh;
+        width: 0px;
+        transition: all 0.5s;
+        background-color: antiquewhite;
+        box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.507);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sidebar"></main>
+    <button onmouseover="sidebarFunc()">Sidebar</button>
+    <script src="index.js"></script>
+  </body>
+</html>

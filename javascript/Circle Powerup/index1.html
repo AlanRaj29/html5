@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+      }
+      .progressbar {
+        height: 100px;
+        width: 100px;
+        /* border: 2px solid yellowgreen; */
+        border-radius: 50%;
+        animation: Move;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-duration: 1s;
+        box-shadow: 2px 2px 50px rgba(255, 255, 255, 0.341);
+      }
+
+      @keyframes Move {
+        0% {
+          background-image: conic-gradient(red 0deg, black 10deg);
+          scale: 1;
+        }
+
+        20% {
+          background-image: conic-gradient(red 0deg, black 50deg);
+          scale: 1.01;
+        }
+
+        40% {
+          background-image: conic-gradient(red 0deg, black 100deg);
+          scale: 1.02;
+        }
+
+        60% {
+          background-image: conic-gradient(red 0deg, black 150deg);
+          scale: 1.03;
+        }
+
+        80% {
+          background-image: conic-gradient(red 0deg, black 200deg);
+          scale: 1.04;
+        }
+
+        100% {
+          background-image: conic-gradient(red 0deg, black 700deg);
+          scale: 1.05;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progressbar"></div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+@import "./mixins";
+
+@mixin Row5 {
+  .row5 {
+    @include Flex(center, center, column);
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 10px solid rgba(128, 128, 128, 0.233);
+
+    > .title {
+      margin: 20px auto 50px auto;
+
+      @include breakpoint(600px) {
+        text-align: center;
+        font-size: 20px;
+      }
+    }
+
+    > .dropdown {
+      @include Box(60px, 60%, #3b3939);
+      @include Flex(space-between, center);
+      padding: 0px 20px;
+      box-sizing: border-box;
+      margin: 10px auto;
+
+      @include breakpoint(600px) {
+        @include Box(60px, 100%, #3b3939);
+      }
+
+      > span {
+        &:nth-of-type(1) {
+          font-size: 24px;
+
+          @include breakpoint(600px) {
+            font-size: 15px;
+          }
+        }
+
+        &:nth-of-type(2) {
+          font-size: 40px;
+
+          @include breakpoint(600px) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    > .font1 {
+      margin: 25px auto;
+      font-size: 18px;
+
+      @include breakpoint(600px) {
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+
+    > .row {
+      @include Flex(space-between, center);
+      margin: 40px auto;
+
+      @include breakpoint(600px) {
+        @include Flex(center, center, row, wrap);
+      }
+
+      > input {
+        @include Box(55px, 500px, white, none);
+        box-sizing: border-box;
+        padding-left: 20px;
+        border: none;
+
+        @include breakpoint(600px) {
+          width: 100%;
+          margin: 20px auto;
+        }
+      }
+
+      > .btn {
+        @include Flex(center, center);
+        @include Box(56px, 120px, red);
+      }
+    }
+  }
+}

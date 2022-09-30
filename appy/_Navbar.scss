@@ -27,13 +27,27 @@
 
     >.center-route {
       >a {
+        position: relative;
         text-decoration: none;
         color: #fdfefe;
         margin: 0px 10px;
         font-weight: 800px;
         font-size: 18px;
 
+        >a::before{
+          position: absolute;
+          contain: '';
+          left: 0;
+          right: 0;
+          height: 3px;
+          width: 100%;
+          background: #fff;
+          transform: scale(0);
+          transform-origin: right;
+        
+        }
       }
+     
 
       @include breakpoint(1050px) {
         display: none;
@@ -68,15 +82,12 @@
 
     }
 
-    .menu>div {
+    .menu {
       display: none;
 
       @include breakpoint(1050px) {
         display: block;
-        height: 4px;
-        width: 35px;
-        background-color: aliceblue;
-        margin: 5px 0px;
+
       }
 
 
